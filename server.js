@@ -76,10 +76,10 @@ app.post('/login',login,(req,res)=>{
 })
 
 //Adding a global catch - error middleware
-// app.use((err,req,res,next)=>{
-//     res.json({
-//         msg:'Some issue on our end, Sorry!'
-//     })
-// })
+app.use((err,req,res,next)=>{
+    res.json({
+        msg:'Some issue on our end, Sorry!'
+    })
+})
 
 app.listen(PORT);
